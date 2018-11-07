@@ -28,6 +28,11 @@ print(my_dog.name)
 print(dog1.name)
 print(dog2.name)
 
+my_dog.bark()
+dog1.bark()
+dog2.bark()
+
+
 
 
 
