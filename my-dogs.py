@@ -1,1 +1,1 @@
-import dog
+import dueler
