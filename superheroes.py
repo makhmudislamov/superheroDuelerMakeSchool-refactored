@@ -1,5 +1,5 @@
 class Hero:
-    def __init__(self, name, starting_health=100, current_health, superpower):
+    def __init__(self, name, starting_health=100):
         ''' 
         Initialize these values as instance variables:
         (Some of these values are passed in above, others will need to be set at a starting value.)
@@ -8,16 +8,17 @@ class Hero:
         starting_health:
         current_health:
          '''
-         self.name = name
-         self.starting_health = starting_health
-         self.current_health = current_health
-         self.superpower = superpower
+        self.name = name
+        self.starting_health = starting_health
+        self.current_health = starting_health
+        self.abilities = list()
 
 
 
     def add_ability(self, ability):
         ''' Add ability to abilities list '''
-        pass
+        list.append(ability)
+        return list
 
     def attack(self):
         ''' 
