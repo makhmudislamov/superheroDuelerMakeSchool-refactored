@@ -11,9 +11,7 @@ class Hero:
         self.name = name
         self.starting_health = starting_health
         self.current_health = starting_health
-        self.abilities = list()
-
-
+        self.abilities = []
 
     def add_ability(self, ability):
         ''' Add ability to abilities list '''
@@ -28,7 +26,8 @@ class Hero:
         on every ability in self.abilities and
         return the total.
         '''
-        pass
+        for ability in abilities:
+            ability.attack()
 
     def take_damage(self, damage):
         ''' 
