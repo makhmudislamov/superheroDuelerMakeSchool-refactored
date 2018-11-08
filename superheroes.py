@@ -1,5 +1,5 @@
 class Hero:
-    def __init__(self, name, starting_health=100):
+    def __init__(self, name, starting_health=100, current_health, superpower):
         ''' 
         Initialize these values as instance variables:
         (Some of these values are passed in above, others will need to be set at a starting value.)
@@ -8,7 +8,12 @@ class Hero:
         starting_health:
         current_health:
          '''
-         pass
+         self.name = name
+         self.starting_health = starting_health
+         self.current_health = current_health
+         self.superpower = superpower
+
+
 
     def add_ability(self, ability):
         ''' Add ability to abilities list '''
@@ -31,7 +36,7 @@ class Hero:
         '''
         pass
 
-    def is_alive(self):
+    def is_alive(self):  
         '''
         This function will 
         return true if the hero is alive 
@@ -39,7 +44,7 @@ class Hero:
         '''
         pass
 
-    def fight(self, opponent):
+    def fight(self, opponent):  
         '''
         Runs a loop to attack the opponent until someone dies.
         '''
@@ -63,6 +68,6 @@ class Ability:
 
 
 if __name__ == "__main__":
-    # If you run this file from the terminal
+    # If you run this file from the terminal 
     # this block is executed.
     pass
