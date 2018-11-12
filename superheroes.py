@@ -26,15 +26,18 @@ class Hero:
         on every ability in self.abilities and
         return the total.
         '''
-        for ability in abilities:
-            ability.attack()
+        total_attack = 0
+        for ability in self.abilities:
+            total_attack += ability.attack()
+            return total_attack
+
 
     def take_damage(self, damage):
         ''' 
         This method should update self.current_health 
         with the damage that is passed in.
         '''
-        pass
+        self.current_health
 
     def is_alive(self):  
         '''
