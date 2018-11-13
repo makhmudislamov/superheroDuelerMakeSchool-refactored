@@ -12,6 +12,9 @@ class Hero:
         self.starting_health = starting_health
         self.current_health = starting_health
         self.abilities = []
+        self.armors = []
+        self.deaths = 0
+        self.kills = 0
 
     def add_ability(self, ability):
         ''' Add ability to abilities list '''
@@ -37,7 +40,10 @@ class Hero:
         This method should update self.current_health 
         with the damage that is passed in.
         '''
-        self.current_health
+        self.current_health -= damage
+        if self.current_health <= 0:
+            self.deaths += 1
+
 
     def is_alive(self):  
         '''
