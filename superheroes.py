@@ -83,3 +83,6 @@ if __name__ == "__main__":
     # If you run this file from the terminal 
     # this block is executed.
     pass
+
+hero = Hero("Wonder Woman")
+print(hero.name)
