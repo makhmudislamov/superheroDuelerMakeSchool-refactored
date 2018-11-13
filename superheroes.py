@@ -51,7 +51,10 @@ class Hero:
         return true if the hero is alive 
         or false if they are not. 
         '''
-        pass
+        if self.current_health > 0:
+            return True
+        else:
+            return False
 
     def fight(self, opponent):  
         '''
