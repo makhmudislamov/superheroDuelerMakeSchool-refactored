@@ -106,6 +106,13 @@ class Ability:
     def attack_power_update(self, new_power):
         self.attack_power = new_power
 
+
+class Weapon(Ability):
+    def attack(self):
+        return randint(0, self.attack_power)
+
+
+
 if __name__ == "__main__":
     # If you run this file from the terminal 
     # this block is executed.
