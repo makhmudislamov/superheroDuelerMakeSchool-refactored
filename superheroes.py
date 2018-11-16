@@ -164,8 +164,12 @@ class Team:
         for hero in self.heroes:
             ratio = hero.kills/hero.deaths if hero.deaths > 0 else hero.kills 
             print(hero.name, "Kill to Death Ratio: ", ratio)
-    def update_kills()
-        pass
+
+    def update_kills(self, kills):
+        for hero  in self.heroes:
+            hero.add_kill(kills)
+            
+        
 
 
 
