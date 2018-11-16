@@ -145,8 +145,16 @@ class Team:
             return self.deal_damage(excess_damage)
         return 0
 
-    def deal_damage()
-        pass
+
+    def deal_damage(self, damage):
+        damage = damage / len(self.heroes)
+        dead_heroes = 0
+        for hero in self.heroes:
+            hero.take_damage(damage)
+            if hero.current_health <= 0:
+                dead_heroes += 1
+            return dead_heroes
+        
 
     def update_kills()
         pass
