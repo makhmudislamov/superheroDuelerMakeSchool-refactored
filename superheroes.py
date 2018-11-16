@@ -76,7 +76,7 @@ class Hero:
 
     def add_armor(self, armor):
         self.armors.append(armor)
-        
+
 
     
 
@@ -88,12 +88,13 @@ class Hero:
 
 
 class Ability:
-    def __init__(self, name, max_damage):
+    def __init__(self, name, attack_power):
         ''' 
         Initialize the values passed into this 
         method as instance variables.
          '''
-        pass
+        self.name = name
+        self.attack_power = attack_power
 
     def attack(self):
         ''' 
@@ -111,13 +112,6 @@ if __name__ == "__main__":
 hero = Hero("Wonder Woman")
 print(hero.name)
 
-# ! NOT WORKING - MAKE it WORK
 
-# ? DOING GOOD?
-
-# TODO 1: testing
-# TODO 2:
-# TODO 3:
-# TODO 4:
 
 
