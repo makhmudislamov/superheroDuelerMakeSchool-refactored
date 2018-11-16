@@ -137,7 +137,21 @@ class Team:
         attack_power = sum([hero.attack() for hero in self.heroes])
         killed_enemies = other_team.defend(attack_power)
         self.update_kills(killed_enemies)
-        
+
+    def defend(self, damage_amount):
+        defense_strength = sum([hero.defend() for hero in self.heroes])
+        excess_damage = damage_amount - defense_strength
+        if excess_damage > 0:
+            return self.deal_damage(excess_damage)
+        return 0
+
+    def deal_damage()
+        pass
+
+    def update_kills()
+        pass
+
+
 
 if __name__ == "__main__":
     # If you run this file from the terminal 
