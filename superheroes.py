@@ -101,7 +101,7 @@ class Ability:
         Return a random attack value 
         between 0 and max_damage.
         '''
-        pass
+        return randint(self.attack_power // 2, self.attack_power)
 
 
 if __name__ == "__main__":
