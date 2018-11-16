@@ -119,6 +119,13 @@ class Team:
     def add_hero(self, hero):
         self.heroes.append(hero)
 
+    def remove_hero(self, name):
+        index = self.find_hero(name)
+        if index == -1:
+            return 0
+        self.heroes.pop(index)
+        
+
 if __name__ == "__main__":
     # If you run this file from the terminal 
     # this block is executed.
