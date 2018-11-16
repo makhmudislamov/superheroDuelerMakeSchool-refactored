@@ -43,7 +43,7 @@ class Hero:
         string += "\n\t".join(["{}: {}".format(a.name, a.attack_power) for a in self.abilities])
         return string
 
-    # TODO revisit this function
+    # TODO revisit this function >>> move to class Team
     def is_alive(self):  
         '''
         This function will 
@@ -172,6 +172,12 @@ class Team:
     def show_all_heroes(self):
         for hero in self.heroes:
             print(hero)
+
+    def still_alive(self):
+        for hero in self.heroes:
+            if hero.current_health > 0:
+                return True
+        return False
 
     
     
