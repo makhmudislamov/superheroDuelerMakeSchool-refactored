@@ -111,7 +111,13 @@ class Weapon(Ability):
     def attack(self):
         return randint(0, self.attack_power)
 
+class Team:
+    def __init__(self, team_name):
+        self.name = team_name
+        self.heroes = []
 
+    def add_hero(self, hero):
+        self.heroes.append(hero)
 
 if __name__ == "__main__":
     # If you run this file from the terminal 
