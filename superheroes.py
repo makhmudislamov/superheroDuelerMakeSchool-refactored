@@ -103,6 +103,8 @@ class Ability:
         '''
         return randint(self.attack_power // 2, self.attack_power)
 
+    def attack_power_update(self, new_power):
+        self.attack_power = new_power
 
 if __name__ == "__main__":
     # If you run this file from the terminal 
