@@ -74,6 +74,10 @@ class Hero:
     def add_kill(self, kill_num):
         self.kills += kill_num
 
+    def add_armor(self, armor):
+        self.armors.append(armor)
+        
+
     
 
     def fight(self, opponent):  
