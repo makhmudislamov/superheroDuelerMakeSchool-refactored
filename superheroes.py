@@ -51,6 +51,7 @@ class Hero:
         string += "\n\t".join(["{}: {}".format(a.name, a.attack_power) for a in self.abilities])
         return string
 
+    # TODO revisit this function
     def is_alive(self):  
         '''
         This function will 
@@ -62,6 +63,12 @@ class Hero:
             return True
         else:
             return False
+    
+    def defend(self):
+        if self.current_health == 0:
+            return self.current_health
+        return sum([a.defend() for a in self.armors])
+    
 
     
 
