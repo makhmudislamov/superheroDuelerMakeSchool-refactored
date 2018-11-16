@@ -141,6 +141,11 @@ if __name__ == "__main__":
 hero = Hero("Wonder Woman")
 print(hero.name)
 
+team = Team("New Team")
+team.add_hero(hero)
+
+print(team.find_hero(hero))
+
 
 
 
