@@ -11,8 +11,8 @@ class Hero:
         current_health:
          '''
         self.name = name
-        self.starting_health = starting_health
-        self.current_health = starting_health
+        self.starting_health = current_health
+        self.current_health = current_health
         self.abilities = []
         self.armors = []
         self.deaths = 0
@@ -155,6 +155,9 @@ class Team:
                 dead_heroes += 1
             return dead_heroes
         
+    def revive_heroes(self, current_health=100):
+        for hero in self.heroes:
+            hero.current_health = hero.starting_health
 
     def update_kills()
         pass
