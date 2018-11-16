@@ -187,9 +187,14 @@ class Armor:
     
     def defend(self):
         return randint(0, self.defense_strength)
-        
-    
 
+
+class Arena:
+    def __init__(self):
+        self.first_team = self.build_first_team()
+        self.second_team = self.build_second_team()
+    
+    
         
 
 
