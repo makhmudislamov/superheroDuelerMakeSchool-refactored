@@ -133,6 +133,12 @@ class Team:
         return hero_index
 
 
+    def attack(self, other_team):
+        attack_power = sum([hero.attack() for hero in self.heroes])
+        killed_enemies = other_team.defend(attack_power)
+        self.update_kills(killed_enemies)
+        
+
 if __name__ == "__main__":
     # If you run this file from the terminal 
     # this block is executed.
