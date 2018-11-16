@@ -168,7 +168,14 @@ class Team:
     def update_kills(self, kills):
         for hero  in self.heroes:
             hero.add_kill(kills)
-            
+
+    def show_all_heroes(self):
+        for hero in self.heroes:
+            print(hero)
+
+    
+    
+
         
 
 
