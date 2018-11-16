@@ -34,15 +34,7 @@ class Hero:
             return 0
         return sum([a.attack() for a in self.abilities])
 
-
-    def take_damage(self, damage):
-        ''' 
-        This method should update self.current_health 
-        with the damage that is passed in.
-        '''
-        self.current_health -= damage
-        if self.current_health <= 0:
-            self.deaths += 1
+    
 
     def __repr__(self):
         # TODO change here
@@ -69,6 +61,18 @@ class Hero:
             return self.current_health
         return sum([a.defend() for a in self.armors])
     
+    # TODO revisit this func
+    def take_damage(self, damage):
+        ''' 
+        This method should update self.current_health 
+        with the damage that is passed in.
+        '''
+        self.current_health -= damage
+        if self.current_health <= 0:
+            self.deaths += 1
+
+    def add_kill(self, kill_num):
+        self.kills += kill_num
 
     
 
