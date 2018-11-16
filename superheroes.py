@@ -159,6 +159,11 @@ class Team:
         for hero in self.heroes:
             hero.current_health = hero.starting_health
 
+    def statistics(self):
+        print(self.name, "Battle Statistics: ")
+        for hero in self.heroes:
+            ratio = hero.kills/hero.deaths if hero.deaths > 0 else hero.kills 
+            print(hero.name, "Kill to Death Ratio: ", ratio)
     def update_kills()
         pass
 
