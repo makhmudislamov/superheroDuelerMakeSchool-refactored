@@ -1,3 +1,5 @@
+from random import randint
+
 class Hero:
     def __init__(self, name, starting_health=100):
         ''' 
@@ -18,21 +20,19 @@ class Hero:
 
     def add_ability(self, ability):
         ''' Add ability to abilities list '''
-        list.append(ability)
-        return list
+        self.abilities.append(ability)
 
     def attack(self):
         ''' 
         Calculates damage from list of abilities.
-
         This method should call Ability.attack() 
         on every ability in self.abilities and
         return the total.
+
         '''
-        total_attack = 0
-        for ability in self.abilities:
-            total_attack += ability.attack()
-            return total_attack
+        if len(self.abilities) == 0:
+            return 0
+        return sum([a.attack() for a in self.abilities])
 
 
     def take_damage(self, damage):
@@ -44,17 +44,26 @@ class Hero:
         if self.current_health <= 0:
             self.deaths += 1
 
+    def __repr__(self):
+        # TODO change here
+        string = "Name of a hero: " + self.name
+        string += "\nAbilities:\n\t"
+        string += "\n\t".join(["{}: {}".format(a.name, a.attack_power) for a in self.abilities])
+        return string
 
     def is_alive(self):  
         '''
         This function will 
         return true if the hero is alive 
         or false if they are not. 
+        this function should be replaced with better one
         '''
         if self.current_health > 0:
             return True
         else:
             return False
+
+    
 
     def fight(self, opponent):  
         '''
@@ -86,3 +95,14 @@ if __name__ == "__main__":
 
 hero = Hero("Wonder Woman")
 print(hero.name)
+
+# ! NOT WORKING - MAKE it WORK
+
+# ? DOING GOOD?
+
+# TODO 1: testing
+# TODO 2:
+# TODO 3:
+# TODO 4:
+
+
