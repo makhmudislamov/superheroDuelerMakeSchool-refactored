@@ -185,6 +185,9 @@ class Armor:
         self.name = name
         self.defense_strength = defense_strength
     
+    def defend(self):
+        return randint(0, self.defense_strength)
+        
     
 
         
