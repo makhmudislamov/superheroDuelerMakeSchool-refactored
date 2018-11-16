@@ -180,6 +180,11 @@ class Team:
         return False
 
     
+class Armor:
+    def __init__(self, name, defense_strength):
+        self.name = name
+        self.defense_strength = defense_strength
+    
     
 
         
