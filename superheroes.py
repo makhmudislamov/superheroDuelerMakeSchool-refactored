@@ -124,7 +124,14 @@ class Team:
         if index == -1:
             return 0
         self.heroes.pop(index)
-        
+
+    def find_hero(self, name):
+        hero_index = -1
+        for index, hero in enumerate(self.heroes):
+            if hero.name == name:
+                hero_index = index
+        return hero_index
+
 
 if __name__ == "__main__":
     # If you run this file from the terminal 
