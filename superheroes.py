@@ -229,7 +229,7 @@ class Arena:
             if res in "Yy":
                 return True
             return False
-        print("Please enter valid input"
+        print("Please enter valid input")
         return self.yes_or_no(prompt)
 
     # TODO add delay print
@@ -259,5 +259,6 @@ class Arena:
         self.second_team.statistics()
 
 
-
-
+arena = Arena()
+arena.team_battle()
+arena.show_statistics()
