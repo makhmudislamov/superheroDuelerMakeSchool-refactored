@@ -223,6 +223,16 @@ class Arena:
             return extras
 
 
+    def yes_or_no(self, prompt):
+        response = input(prompt)
+        if response in ["Y", "y", "N", "n"]:
+            if res in "Yy":
+                return True
+            return False
+        print("Please enter valid input"
+        return self.yes_or_no(prompt)
+
+        
 
 if __name__ == "__main__":
     # If you run this file from the terminal 
