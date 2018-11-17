@@ -194,9 +194,20 @@ class Arena:
         self.first_team = self.build_first_team()
         self.second_team = self.build_second_team()
     
-    
-        
 
+    def build_team(self):
+        team_name = input("What is the name of this team? >> ")
+        new_team = Team(team_name)
+        add_more_heroes = True
+        while add_more_heroes:
+            print("Now let's add a hero to this team.")
+            new_hero = Hero(input("What is the name of this hero? >> "))
+            new_hero.abilities = self.get_hero_extras("ability", new_hero.name)
+            new_hero.abilities = self.get_hero_extras("weapon", new_hero.name)
+            new_hero.armors = self.get_hero_extras("armor", new_hero.name)
+            new_team.add_hero(new_hero)
+            add_more_heroes = self.yes_or_no("Do you want to add one more hero to " + team_name + "?")
+        return new_team
 
 
 if __name__ == "__main__":
