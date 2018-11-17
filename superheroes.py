@@ -242,6 +242,17 @@ class Arena:
         print("Building the second team...")
         return self.build_team()
 
+
+    def team_battle(self):
+        while self.first_team.still_alive() and self.second_team.still_alive():
+            self.first_team.attack(self.second_team)
+            self.second_team.attack(self.first_team)
+        if self.first_team.still_alive():
+            print(self.first_team.name, " won the battle!")
+        else:
+            print(self.second_team.name, " won the battle!")
+
+
 if __name__ == "__main__":
     # If you run this file from the terminal 
     # this block is executed.
