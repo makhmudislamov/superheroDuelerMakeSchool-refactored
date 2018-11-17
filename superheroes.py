@@ -253,18 +253,10 @@ class Arena:
             print(self.second_team.name, " won the battle!")
 
 
-if __name__ == "__main__":
-    # If you run this file from the terminal 
-    # this block is executed.
-    pass
-
-hero = Hero("Wonder Woman")
-print(hero.name)
-
-team = Team("New Team")
-team.add_hero(hero)
-
-print(team.find_hero(hero))
+    def show_statistics(self):
+        print("The Battle is over: ")
+        self.first_team.statistics()
+        self.second_team.statistics()
 
 
 
