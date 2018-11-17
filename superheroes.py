@@ -210,6 +210,20 @@ class Arena:
         return new_team
 
 
+    def get_hero_extras(self, extra_type, hero_name):
+        extras = []
+        if self.yes_or_no("Do you want to add one more hero to " + team_name + "?"):
+            keep_asking = True
+            extra = Ability if extra_type == "ability" else Weapon if extra_type == "weapon" else Armor
+            while keep_asking:
+                name = input("Name of this " + extra_type + " >>> ")
+                strength = int(input("Enter " + name + "'s" + ("shield" if extra_type == "armor" else "attack") + "strength >> "))
+                extras.append(extra(name, strength))
+                keep_asking = self.yes_or_no("Do you want to add another " + extra_type + " to this hero? (y/n) >> ")
+            return extras
+
+
+
 if __name__ == "__main__":
     # If you run this file from the terminal 
     # this block is executed.
