@@ -232,7 +232,15 @@ class Arena:
         print("Please enter valid input"
         return self.yes_or_no(prompt)
 
-        
+    # TODO add delay print
+    def build_first_team(self):
+        print("Building the first team...")
+        return self.build_team()
+
+    # TODO add delay print
+    def build_second_team(self):
+        print("Building the second team...")
+        return self.build_team()
 
 if __name__ == "__main__":
     # If you run this file from the terminal 
